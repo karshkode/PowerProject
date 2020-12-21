@@ -19,7 +19,7 @@ $action =
     Write-Host "Stopping PowerPoint"
     Stop-Process -name POWERPNT -Force
     Start-Sleep -s 3
-    Copy-Item $path -Destination 'C:\PowerPoint\Stage\current.pps' -Force -Verbose
+    Copy-Item $path -include "*.ppt","*.pptx" -Destination 'C:\PowerPoint\Stage\current.pps' -Force -Verbose
     Write-Host "File ($path) Copied to Stage"
     Start-Sleep -s 3
     $stage = gci 'C:\Powerpoint\Stage'  | where { ! $_.PSIsContainer } | sort LastWriteTime | select -last 1
