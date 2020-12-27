@@ -1,5 +1,6 @@
 PowerProject utilizes a PowerShell file watcher (System.IO.FileSystemWatcher) and monitors a folder of choice to be able to project a PowerPoint presentation by simply dropping a file into it's repository:
 
+**Path to watcher must be manually created!**
 * $watcher.Path: Path to folder where files are watched
 * $LogPath: Path to logs of session
 
