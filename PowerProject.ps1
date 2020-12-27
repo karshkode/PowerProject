@@ -22,7 +22,7 @@ $action =
     Copy-Item $path -include "*.ppt","*.pptx" -Destination 'C:\PowerPoint\Stage\current.pps' -Force -Verbose
     Write-Host "File ($path) Copied to Stage"
     Start-Sleep -s 3
-    $stage = gci 'C:\Powerpoint\Stage'  | where { ! $_.PSIsContainer } | sort LastWriteTime | select -last 1
+    #$stage = gci 'C:\Powerpoint\Stage'  | where { ! $_.PSIsContainer } | sort LastWriteTime | select -last 1
     $newpath = "C:\PowerPoint\Stage\current.pps" #+ $stage.Name
     Write-Host "Starting Powerpoint ($newpath)"
     Invoke-Item $newpath
