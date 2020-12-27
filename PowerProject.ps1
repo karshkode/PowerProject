@@ -29,6 +29,3 @@ $action =
 }
 
 Register-ObjectEvent $watcher 'Created' -Action $action
-
-##Start-Sleep -s 3600
-##.\PowerPoint.ps1
